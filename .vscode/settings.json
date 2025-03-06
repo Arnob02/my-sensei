@@ -1,0 +1,27 @@
+{
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggest.showWords": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showVariables": true,
+  "editor.suggest.showModules": true,
+  "editor.suggest.showMethods": true,
+  "editor.suggest.showFields": true,
+  "editor.suggest.showClasses": true,
+  "editor.suggest.showStructs": true,
+  "editor.suggest.showInterfaces": true,
+  "editor.suggest.showEvents": true,
+  "editor.suggest.showOperators": true,
+  "editor.suggest.showTypeParameters": true,
+  "editor.suggest.showSnippets": true,
+  "editor.formatOnType": true,
+  "editor.tabCompletion": "on",
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "tailwindCSS.emmetCompletions": true
+}
