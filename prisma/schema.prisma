@@ -1,11 +1,15 @@
 generator client {
   provider = "prisma-client-js"
+  output   = "./node_modules/@prisma/client"
 }
+
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  shadowDatabaseUrl = ""
 }
+
 
 model User {
   id            String    @id @default(uuid())
@@ -45,14 +49,13 @@ model Assessment {
 
 model Resume {
   id          String    @id @default(cuid())
-  userId      String    @unique    // One resume per user
+  userId      String    @unique
   user        User      @relation(fields: [userId], references: [id])
-  content     String    @db.Text // Markdown content
-  atsScore    Float?
-  feedback    String?
+  content     String    @db.Text // add ATS Score and feedback 
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 }
+
 
 model CoverLetter {
   id              String    @id @default(cuid())
@@ -82,11 +85,11 @@ model IndustryInsight {
   
   // Industry trends
   growthRate    Float     // Industry growth rate
-  demandLevel   String    // "High", "Medium", "Low"
+  demandLevel   DemandLevel    // "High", "Medium", "Low"
   topSkills     String[]  // Most in-demand skills
   
   // Market conditions
-  marketOutlook String    // "Positive", "Neutral", "Negative"
+  marketOutlook MarketOutlook    // "Positive", "Neutral", "Negative"
   keyTrends     String[]  // Array of current industry trends
   
   // Learning suggestions
@@ -97,3 +100,15 @@ model IndustryInsight {
 
   @@index([industry])
 }
+
+enum DemandLevel{
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum MarketOutlook{
+  POSITIVE
+  NEUTRAL
+  NEGATIVE
+} 
