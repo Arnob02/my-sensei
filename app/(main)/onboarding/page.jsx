@@ -1,7 +1,14 @@
+import { industries } from "@/data/industries";
 import React from "react";
 
 const OnBoardingPage = () => {
-  return <div>OnBoardingPage</div>;
+  // Check if user is already onboarded
+
+  return (
+    <main>
+      <OnBoardingForm industries={industries} />
+    </main>
+  );
 };
 
 export default OnBoardingPage;
