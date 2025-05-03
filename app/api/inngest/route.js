@@ -1,11 +1,8 @@
-// lib/prisma.js
+import { db } from "@/lib/prisma"; // ✅ Import the shared Prisma client
 
-import { PrismaClient } from "@prisma/client";
-
-const globalForPrisma = globalThis;
-
-export const db = globalForPrisma.db || new PrismaClient();
-
-if (process.env.NODE_ENV !== "production") {
-  globalForPrisma.db = db;
+// Now you can use `db` as needed in this file
+// Example:
+export async function GET(req) {
+  const users = await db.user.findMany();
+  return Response.json(users);
 }
