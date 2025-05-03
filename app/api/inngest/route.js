@@ -1,12 +1,11 @@
-import { serve } from "inngest/next";
-import { inngest } from "@/lib/inngest/client";
-import { generateIndustryInsights } from "@/lib/inngest/functions";
+// lib/prisma.js
 
-// Create an API that serves zero functions
-export const { GET, POST, PUT } = serve({
-  client: inngest,
-  functions: [
-    /* your functions will be passed here later! */
-    generateIndustryInsights,
-  ],
-});
+import { PrismaClient } from "@prisma/client";
+
+const globalForPrisma = globalThis;
+
+export const db = globalForPrisma.db || new PrismaClient();
+
+if (process.env.NODE_ENV !== "production") {
+  globalForPrisma.db = db;
+}
