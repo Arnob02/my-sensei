@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My-Sensei 👨‍🎓
 
-## Getting Started
+**My-Sensei** is an AI-powered platform designed to help users enhance their career development by providing personalized industry insights, skills recommendations, and career growth guidance. The platform offers a seamless user experience with personalized profiles, including a resume builder, cover letter generator, and career-oriented insights.
 
-First, run the development server:
+### [Live Demo](https://my-sensei.vercel.app/) 🔗
 
-```bash
-npm run dev 
-# or 
-yarn dev 
-# or    
-pnpm dev  
-# or    
-bun dev  
-```  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features 🎯
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **User Profiles**: Users can create and update their profiles with personal information, industry, experience, and skills. 👤
+- **AI-Powered Career Insights**: Industry insights, salary ranges, market outlook, and recommended skills are provided to help users grow their careers. 💼
+- **AI-Powered Resume Builder and Cover Letter 📝**: Users can build and customize their resumes and cover letters for specific job applications. 📝
+- **Easy Onboarding**: New users can quickly get started by selecting their industry and entering key information. 🔑
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-  
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used ⚙️
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend**:  
+  - React 🧰  
+  - Next.js ⚡ (with Turbopack for fast bundling)  
+  - Tailwind CSS 🎨 (for styling)  
+  - React Hook Form 📄 (for forms)
+  - Zod ✅ (for form validation)
+  - Shadcn UI 🔥
 
-## Deploy on Vercel
+- **Backend**:  
+  - Node.js ⚡  
+  - Prisma ORM 🔗 (for interacting with the database)  
+  - PostgreSQL 🗃️ (database)  
+  - Clerk 🔑 (authentication)  
+  - Vercel 🚀 (deployment)
+ 
+- **AI Integration**:  
+  - Gemini AI for quiz question generation and explanations 💻 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Other Libraries**:  
+  - Lucide ✨ (for icons)  
+  - Sonner 💬 (for toast notifications)  
+  - Next.js Server and Client APIs 📡
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
